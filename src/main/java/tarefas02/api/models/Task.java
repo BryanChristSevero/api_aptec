@@ -93,7 +93,7 @@ public class Task {
 
 public class Task {
 
-    public static final String TABLE_NAME = "task"
+    public static final String TABLE_NAME = "task";
 
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
