@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; // Util
 import org.springframework.stereotype.Service; // Marca a classe como um serviço Spring
 import org.springframework.transaction.annotation.Transactional; // Gerencia o contexto transacional do banco
 
+import jakarta.validation.Valid;
 import tarefas02.api.models.User; // Modelo da entidade User
 import tarefas02.api.models.enums.ProfileEnums; // Enumerador com os perfis de acesso (ADMIN, USER)
 import tarefas02.api.repositories.UserRepository; // Repositório JPA para a entidade User
