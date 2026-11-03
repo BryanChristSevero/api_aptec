@@ -21,10 +21,11 @@ async function signup(event){
         });
 
         if(response.ok){
-            alert("Cadastro realizado com sucesso!");
+            alert("Usuario cadastrado com sucesso! Faça login para continuar.");
+
             window.location.href = "login.html";
         } else {
-            alert("Erro ao realizar cadastro!");
+            alert("Erro ao realizar cadastro. Verifique os dados fornecidos");
         }
 
     } catch(error){
