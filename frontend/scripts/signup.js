@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080"
+const API_URL = "http://localhost:8080";
 
 async function signup(event){
     event.preventDefault();
@@ -7,29 +7,28 @@ async function signup(event){
     const passwordInput = document.getElementById("password").value;
 
     try{
-
-        const response = await fetch(`${API_URL}/signup`, {
+        const response = await fetch('${API_URL}/user',{
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
+                "Content-Type":"application/json",
+                "Accept":"application/json"
             },
             body: JSON.stringify({
-                username: usernameInput,
-                password: passwordInput
+                username:usernameInput,
+                password:passwordInput
             })
         });
-
+        
         if(response.ok){
             alert("Usuario cadastrado com sucesso! Faça login para continuar.");
 
             window.location.href = "login.html";
         } else {
-            alert("Erro ao realizar cadastro. Verifique os dados fornecidos");
+            alert("Erro ao realizar cadastro. Verifique ps dados fornecidos.");
         }
-
     } catch(error){
         console.error("Erro na requisição de cadastro:", error);
         alert("Erro ao conectar com o servidor.");
     }
+
 }

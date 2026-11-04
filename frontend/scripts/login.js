@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080"
+const API_URL = "http://localhost:8080";
 
 async function login(event){
     event.preventDefault();
@@ -8,11 +8,11 @@ async function login(event){
 
     try{
 
-        const response = await fetch(`${API_URL}/login`, {
+        const response = await fetch('${API_URL}/login',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Accept": "application/json"
+                "Accept":"application/json"
             },
             body: JSON.stringify({
                 username: usernameInput,
@@ -21,21 +21,20 @@ async function login(event){
         });
 
         if(response.ok){
-            const token = response.headers.get("Authentication");
+            const token = response.headers.get("Authetication");
 
             if(token){
                 localStorage.setItem("Authorization", token);
             
-                alert("Login Realizado com sucesso!");
-                window.location.href = "index.html";
-            } else {
-                alert("Usuario ou Senha invalidos!");
-            }
-
+            alert("Login Realizado com sucesso");
+        
+        window.location.href = "index.html";
+        } else {
+            alert("Usuario ou senha invalidos!");
+        }
     }
-
-        } catch(error){
-            console.error("Erro na requisição de login:", error);
+        }catch(error){
+            console.error("Erro na requisição de login", error);
             alert("Erro ao conectar com o servidor.");
         }
-   }
+    }
