@@ -5,6 +5,7 @@ import java.net.URI; // Importação da classe URI
 import org.springframework.beans.factory.annotation.Autowired; // Injeção de dependências do Spring
 import org.springframework.http.ResponseEntity; // Encapsulador de resposta HTTP
 import org.springframework.validation.annotation.Validated; // Ativa a validação na controller
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping; // Mapeia o método HTTP DELETE
 import org.springframework.web.bind.annotation.GetMapping; // Mapeia o método HTTP GET
 import org.springframework.web.bind.annotation.PathVariable; // Extração de variável da URL
